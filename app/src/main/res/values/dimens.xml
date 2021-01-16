@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--paddings & margins-->
+    <dimen name="edit_text_padding">8dp</dimen>
+    <dimen name="list_item_margin_bottom">8dp</dimen>
+    <dimen name="default_margin">16dp</dimen>
+    <dimen name="default_padding">16dp</dimen>
+
+    <!--CardView circle-->
+    <dimen name="list_image_size">48dp</dimen>
+    <dimen name="list_image_corner_radius">24dp</dimen> <!--size/2-->
+    <dimen name="toolbar_image_size">36dp</dimen>
+    <dimen name="toolbar_image_corner_radius">18dp</dimen> <!--size/2-->
+    <dimen name="default_image_size">24dp</dimen>
+    <dimen name="default_image_corner_radius">12dp</dimen><!--size/2-->
+    <dimen name="details_image_size">64dp</dimen>
+    <dimen name="details_image_corner_radius">32dp</dimen><!--size/2-->
+
+    <!--elevation-->
+    <dimen name="elevation_circle_image">0dp</dimen>
+    <dimen name="elevation_list_item">4dp</dimen>
+    <dimen name="elevation_button">2dp</dimen>
+
+    <!--corner radius-->
+    <dimen name="corner_radius">11dp</dimen>
+    <dimen name="corner_radius_round">24dp</dimen>
+
+</resources>

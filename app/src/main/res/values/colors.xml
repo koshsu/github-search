@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--Github colors-->
+    <color name="colorPrimary">#24292E</color>
+    <color name="colorPrimaryDark">#24292E</color>
+    <color name="colorPrimaryLight">#393e42</color>
+    <color name="colorAccent">#2EA44F</color>
+    <color name="colorFragmentBackground">#FAFBFC</color>
+
+    <!--Defaults-->
+    <color name="colorTextPrimary">#333333</color>
+    <color name="colorTextSecondary">#808080</color>
+    <color name="colorLink">#0064bd</color>
+    <color name="colorListItemBackground">@color/colorWhite</color>
+    <color name="colorImagePlaceholder">@color/colorGreyLightBg</color>
+    <color name="colorGreyLightBg">#F2F2F2</color>
+    <color name="colorWhite">#fff</color>
+
+    <!--Default theme-->
+    <color name="colorToolbarItem">@color/colorWhite</color>
+
+</resources>

@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--Base Text Appearance-->
+    <style name="Text">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/colorTextPrimary</item>
+        <item name="android:textColorHint">@color/colorTextSecondary</item>
+        <item name="android:textColorHighlight">@color/colorTextPrimary</item>
+        <item name="android:textColorLink">@color/colorLink</item>
+    </style>
+
+    <!--Primary Text Appearance-->
+    <style name="Text.Primary">
+        <item name="android:textColor">@color/colorTextPrimary</item>
+    </style>
+
+    <style name="Text.Primary.Header">
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="Text.Primary.Header.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text.Primary.Title">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="Text.Primary.Title.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text.Primary.Subheader">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="Text.Primary.Subheader.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text.Primary.Body" />
+
+    <style name="Text.Primary.Body.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text.Primary.Body.Overline">
+        <item name="textAllCaps">true</item>
+    </style>
+
+    <style name="Text.Primary.Caption">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="Text.Primary.Caption.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text.Primary.Caption.Overline">
+        <item name="textAllCaps">true</item>
+    </style>
+
+    <!--Secondary Text Appearance-->
+    <style name="Text.Secondary">
+        <item name="android:textColor">@color/colorTextSecondary</item>
+    </style>
+
+    <style name="Text.Secondary.Header">
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="Text.Secondary.Header.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text.Secondary.Title">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="Text.Secondary.Title.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text.Secondary.Subheader">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="Text.Secondary.Subheader.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text.Secondary.Body" />
+
+    <style name="Text.Secondary.Body.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text.Secondary.Caption">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="Text.Secondary.Caption.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text.Secondary.Caption.Overline">
+        <item name="textAllCaps">true</item>
+    </style>
+
+    <!--TextView-->
+    <style name="TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAppearance">@style/Text</item>
+    </style>
+
+    <!--Primary TextView-->
+    <style name="TextView.Primary">
+        <item name="android:textAppearance">@style/Text.Primary</item>
+    </style>
+
+    <style name="TextView.Primary.Header">
+        <item name="android:textAppearance">@style/Text.Primary.Header</item>
+    </style>
+
+    <style name="TextView.Primary.Header.Bold">
+        <item name="android:textAppearance">@style/Text.Primary.Header.Bold</item>
+    </style>
+
+    <style name="TextView.Primary.Title">
+        <item name="android:textAppearance">@style/Text.Primary.Title</item>
+    </style>
+
+    <style name="TextView.Primary.Title.Bold">
+        <item name="android:textAppearance">@style/Text.Primary.Title.Bold</item>
+    </style>
+
+    <style name="TextView.Primary.Title.Fade">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:ellipsize">none</item>
+        <item name="android:fadingEdgeLength">40dp</item>
+        <item name="android:requiresFadingEdge">horizontal</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="TextView.Primary.Subheader">
+        <item name="android:textAppearance">@style/Text.Primary.Subheader</item>
+    </style>
+
+    <style name="TextView.Primary.Subheader.Bold">
+        <item name="android:textAppearance">@style/Text.Primary.Subheader.Bold</item>
+    </style>
+
+    <style name="TextView.Primary.Subheader.Bold.Fade">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:ellipsize">none</item>
+        <item name="android:fadingEdgeLength">40dp</item>
+        <item name="android:requiresFadingEdge">horizontal</item>
+    </style>
+
+    <style name="TextView.Primary.Body">
+        <item name="android:textAppearance">@style/Text.Primary.Body</item>
+    </style>
+
+    <style name="TextView.Primary.Body.Bold">
+        <item name="android:textAppearance">@style/Text.Primary.Body.Bold</item>
+    </style>
+
+    <style name="TextView.Primary.Body.Overline">
+        <item name="android:textAppearance">@style/Text.Primary.Body.Overline</item>
+    </style>
+
+    <style name="TextView.Primary.BodyLarge" parent="TextView.Primary.Subheader" />
+
+    <style name="TextView.Primary.BodyLarge.Bold" parent="TextView.Primary.Subheader.Bold" />
+
+    <style name="TextView.Primary.Caption">
+        <item name="android:textAppearance">@style/Text.Primary.Caption</item>
+    </style>
+
+    <style name="TextView.Primary.Caption.Bold">
+        <item name="android:textAppearance">@style/Text.Primary.Caption.Bold</item>
+    </style>
+
+    <style name="TextView.Primary.Caption.Overline">
+        <item name="android:textAppearance">@style/Text.Primary.Caption.Overline</item>
+    </style>
+
+    <!--Secondary TextView-->
+    <style name="TextView.Secondary">
+        <item name="android:textAppearance">@style/Text.Secondary</item>
+    </style>
+
+    <style name="TextView.Secondary.Header">
+        <item name="android:textAppearance">@style/Text.Secondary.Header</item>
+    </style>
+
+    <style name="TextView.Secondary.Header.Bold">
+        <item name="android:textAppearance">@style/Text.Secondary.Header.Bold</item>
+    </style>
+
+    <style name="TextView.Secondary.Title">
+        <item name="android:textAppearance">@style/Text.Secondary.Title</item>
+    </style>
+
+    <style name="TextView.Secondary.Title.Bold">
+        <item name="android:textAppearance">@style/Text.Secondary.Title.Bold</item>
+    </style>
+
+    <style name="TextView.Secondary.Subheader">
+        <item name="android:textAppearance">@style/Text.Secondary.Subheader</item>
+    </style>
+
+    <style name="TextView.Secondary.Subheader.Bold">
+        <item name="android:textAppearance">@style/Text.Secondary.Subheader.Bold</item>
+    </style>
+
+    <style name="TextView.Secondary.Body">
+        <item name="android:textAppearance">@style/Text.Secondary.Body</item>
+    </style>
+
+    <style name="TextView.Secondary.Body.Bold">
+        <item name="android:textAppearance">@style/Text.Secondary.Body.Bold</item>
+    </style>
+
+    <style name="TextView.Secondary.Body.Fade">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:ellipsize">none</item>
+        <item name="android:fadingEdgeLength">40dp</item>
+        <item name="android:requiresFadingEdge">horizontal</item>
+    </style>
+
+    <style name="TextView.Secondary.BodyLarge" parent="TextView.Secondary.Subheader" />
+
+    <style name="TextView.Secondary.BodyLarge.Bold" parent="TextView.Secondary.Subheader.Bold" />
+
+    <style name="TextView.Secondary.Caption">
+        <item name="android:textAppearance">@style/Text.Secondary.Caption</item>
+    </style>
+
+    <style name="TextView.Secondary.Caption.Bold">
+        <item name="android:textAppearance">@style/Text.Secondary.Caption.Bold</item>
+    </style>
+
+    <style name="TextView.Secondary.Caption.Fade">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:ellipsize">none</item>
+        <item name="android:fadingEdgeLength">40dp</item>
+        <item name="android:requiresFadingEdge">horizontal</item>
+    </style>
+
+    <style name="TextView.Secondary.Caption.Overline">
+        <item name="android:textAppearance">@style/Text.Secondary.Caption.Overline</item>
+    </style>
+
+    <!--EditText-->
+    <style name="EditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">@dimen/edit_text_padding</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textAppearance">@style/Text.Primary.Subheader</item>
+        <item name="android:inputType">textCapSentences|textAutoComplete</item>
+        <item name="android:textColor">@color/colorTextPrimary</item>
+        <item name="android:textColorHint">@color/colorTextSecondary</item>
+    </style>
+
+</resources>

@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Github Search</string>
+
+    <string name="message_welcome">Welcome to Github Search</string>
+    <string name="message_empty_result">Search result is empty</string>
+    <string name="message_error">Oops! Something went wrong.\nPlease try again</string>
+    <string name="message_offline">Currently offline!\nPlease, check your network connection</string>
+    <string name="message_offline_suggest">Currently offline? \nYou can try your last search</string>
+
+    <string name="search_query_hint">Enter repository name</string>
+
+</resources>

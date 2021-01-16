@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment">
+
+<!--        android:layout_marginBottom="?android:attr/actionBarSize"-->
+    <TextView
+        android:id="@+id/message_welcome"
+        style="@style/TextView.Secondary.Header.Bold"
+        android:layout_marginBottom="112dp"
+        android:text="@string/message_welcome"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/search_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/message_welcome"
+        app:iconifiedByDefault="false"
+        app:searchIcon="@drawable/ic_search"
+        android:elevation="@dimen/elevation_button"
+        android:visibility="visible"
+        app:queryBackground="@android:color/transparent"
+        android:background="@drawable/bg_corners_white"
+        app:queryHint="@string/search_query_hint" />
+
+    <TextView
+        android:id="@+id/message_error"
+        style="@style/TextView.Secondary.Title.Bold"
+        android:layout_marginBottom="?android:attr/actionBarSize"
+        android:text="@string/message_error"
+        android:textAlignment="center"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/offline_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/message_welcome">
+
+        <TextView
+            android:id="@+id/message_offline"
+            style="@style/TextView.Secondary.Subheader"
+            android:text="@string/message_offline"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/message_offline_suggest"
+            style="@style/TextView.Secondary.Subheader"
+            android:text="@string/message_offline_suggest"
+            android:textAlignment="center" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/last_search_container"
+            style="@style/Card.Clickable.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="16dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="8dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/ic_search_w"
+                    app:tint="@color/colorTextPrimary" />
+
+                <TextView
+                    android:id="@+id/last_search_tv"
+                    style="@style/TextView.Secondary"
+                    android:layout_marginBottom="2dp"
+                    tools:text="@string/message_welcome" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="repo"
+            type="com.koshsu.githubsearch.data.database.model.Repo" />
+
+        <variable
+            name="view"
+            type="android.view.View" />
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/search_item"
+        style="@style/Card.Clickable.ListItem">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/image_wrapper"
+                style="@style/Card.CircleImage.ListItem"
+                android:layout_centerVertical="true">
+
+                <ImageView
+                    android:id="@+id/image"
+                    android:layout_width="@dimen/list_image_size"
+                    android:layout_height="@dimen/list_image_size"
+                    android:layout_gravity="center"
+                    app:load_image="@{repo.owner.avatarUrl}" />
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/title"
+                style="@style/TextView.Primary.Subheader.Bold.Fade"
+                android:layout_marginStart="16dp"
+                android:layout_toEndOf="@id/image_wrapper"
+                android:text="@{repo.name}"
+                tools:text="Title of repository" />
+
+            <TextView
+                android:id="@+id/author"
+                style="@style/TextView.Primary.Body"
+                android:layout_below="@id/title"
+                android:layout_marginStart="16dp"
+                android:layout_toEndOf="@id/image_wrapper"
+                android:text="@{'@' + repo.owner.login}"
+                tools:text="Author of repository" />
+
+            <TextView
+                android:id="@+id/description"
+                style="@style/TextView.Secondary.Body.Fade"
+                android:layout_below="@id/author"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:layout_toEndOf="@id/image_wrapper"
+                android:maxLines="8"
+                android:visibility="@{repo.description == null ? view.GONE : view.VISIBLE}"
+                android:text="@{repo.description}"
+                tools:text="@tools:sample/lorem" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/description"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="2dp"
+                android:layout_toEndOf="@id/image_wrapper"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginEnd="2dp"
+                    android:src="@drawable/ic_star" />
+
+                <TextView
+                    android:id="@+id/stars"
+                    style="@style/TextView.Secondary.Body"
+                    android:layout_marginEnd="8dp"
+                    android:text="@{String.valueOf(repo.stars)}"
+                    tools:text="425" />
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginEnd="2dp"
+                    android:src="@drawable/ic_fork" />
+
+                <TextView
+                    android:id="@+id/forks"
+                    style="@style/TextView.Secondary.Body"
+                    android:text="@{String.valueOf(repo.forks)}"
+                    tools:text="145" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

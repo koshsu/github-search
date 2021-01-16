@@ -1,0 +1,61 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <!--CardView START-->
+    <style name="Card">
+        <item name="cardPreventCornerOverlap">true</item>
+    </style>
+
+    <style name="Card.Clickable">
+        <item name="android:foreground">?android:attr/selectableItemBackground</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+
+    <style name="Card.Clickable.Button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="cardElevation">@dimen/elevation_button</item>
+        <item name="cardCornerRadius">@dimen/corner_radius</item>
+        <item name="cardBackgroundColor">@android:color/white</item>
+    </style>
+
+    <style name="Card.Clickable.ListItem">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="cardBackgroundColor">@color/colorListItemBackground</item>
+        <item name="cardCornerRadius">@dimen/corner_radius</item>
+        <item name="cardElevation">@dimen/elevation_list_item</item>
+        <item name="android:layout_marginBottom">@dimen/list_item_margin_bottom</item>
+    </style>
+
+    <style name="Card.CircleImage">
+        <item name="android:layout_width">@dimen/default_image_size</item>
+        <item name="android:layout_height">@dimen/default_image_size</item>
+        <item name="cardCornerRadius">@dimen/default_image_corner_radius</item>
+        <item name="cardElevation">@dimen/elevation_circle_image</item>
+        <item name="cardBackgroundColor">@color/colorImagePlaceholder</item>
+    </style>
+
+    <style name="Card.CircleImage.ListItem">
+        <item name="android:layout_width">@dimen/list_image_size</item>
+        <item name="android:layout_height">@dimen/list_image_size</item>
+        <item name="cardCornerRadius">@dimen/list_image_corner_radius</item>
+    </style>
+
+    <style name="Card.CircleImage.DetailsAvatar">
+        <item name="android:layout_width">@dimen/details_image_size</item>
+        <item name="android:layout_height">@dimen/details_image_size</item>
+        <item name="cardCornerRadius">@dimen/details_image_corner_radius</item>
+    </style>
+    <!--CardView END-->
+
+</resources>
