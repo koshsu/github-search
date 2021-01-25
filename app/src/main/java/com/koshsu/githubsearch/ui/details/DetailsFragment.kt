@@ -1,5 +1,7 @@
 package com.koshsu.githubsearch.ui.details
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -17,6 +19,7 @@ import com.koshsu.githubsearch.ui.interfaces.IProgressBarFragment
 import com.koshsu.githubsearch.ui.interfaces.IProgressBarActivity
 import com.koshsu.githubsearch.ui.interfaces.ISearchListenerActivity
 import com.koshsu.githubsearch.utils.toastS
+import kotlinx.android.synthetic.main.fragment_details.*
 import org.kodein.di.KodeinAware
 import org.kodein.di.android.x.kodein
 import org.kodein.di.generic.instance
@@ -79,6 +82,7 @@ class DetailsFragment : Fragment(), KodeinAware,
                     binding.repo = status.data
                     viewModel.isWatchersVisible.value = status.data.watchers != null
                     hideProgressBar()
+                    bindProjectLink(status.data.htmlUrl)
                 }
                 is Status.Error -> {
                     requireContext().toastS(status.errorMessage)
@@ -95,6 +99,14 @@ class DetailsFragment : Fragment(), KodeinAware,
     override fun onResume() {
         super.onResume()
         (requireActivity() as ISearchListenerActivity).showSearchView(false)
+    }
+
+    private fun bindProjectLink(url: String) {
+        project_link_container.setOnClickListener {
+            val defaultBrowser = Intent.makeMainSelectorActivity(Intent.ACTION_MAIN, Intent.CATEGORY_APP_BROWSER)
+            defaultBrowser.data = Uri.parse(url)
+            startActivity(defaultBrowser)
+        }
     }
 
 }

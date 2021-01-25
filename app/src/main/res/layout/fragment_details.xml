@@ -67,7 +67,6 @@
                 android:layout_marginEnd="2dp"
                 android:src="@drawable/ic_watcher"
                 android:visibility="@{vm.isWatchersVisible() ? view.VISIBLE : view.GONE}" />
-<!--                android:visibility="@{repo.watchers == 0 ? view.GONE : view.VISIBLE}" />-->
 
             <TextView
                 android:id="@+id/watchers"
@@ -126,7 +125,44 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/title"
-            tools:text="@tools:sample/lorem/random" />
+            tools:text="@tools:sample/lorem" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/project_link_container"
+            app:layout_constraintTop_toBottomOf="@id/description"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/default_margin"
+            style="@style/Card.Clickable.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="16dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="8dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/ic_github"
+                    app:tint="@color/colorTextPrimary" />
+
+                <TextView
+                    android:id="@+id/project_link_tv"
+                    style="@style/TextView.Secondary"
+                    android:layout_marginBottom="2dp"
+                    android:text="@string/project_link" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
